@@ -57,13 +57,13 @@ public class Unity : ModuleRules
         {
             //PrivateIncludePaths.Add("Private/IOS");
             PublicAdditionalFrameworks.Add(
-                new UEBuildFramework(
+                new Framework(
                 "UnityAds",														// Framework name
                 "../ThirdParty/ThirdPartyFrameworks/UnityAds.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "AdsUtil",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/AdsUtil.embeddedframework.zip")
             );
