@@ -4,9 +4,9 @@
 * Copyright (C) 2017 feiwu <feixuwu@outlook.com> All Rights Reserved.
 */
 
-
-#include "AdCollection.h"
 #include "PlayRewardVideoCallbackProxy.h"
+#include "AdCollection.h"
+
 
 
 UPlayRewardVideoCallbackProxy::UPlayRewardVideoCallbackProxy() :
