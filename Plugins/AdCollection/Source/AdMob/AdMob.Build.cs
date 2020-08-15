@@ -87,31 +87,31 @@ public class AdMob : ModuleRules
 
             // admob
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "GoogleMobileAds",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/GoogleMobileAds.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "GoogleAppMeasurement",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/GoogleAppMeasurement.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "GoogleUtilities",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/GoogleUtilities.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "nanopb",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/nanopb.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new UEBuildFramework(
+            new Framework(
             "AdsUtil",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/AdsUtil.embeddedframework.zip")
             );
