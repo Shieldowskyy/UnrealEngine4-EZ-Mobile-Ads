@@ -85,33 +85,14 @@ public class AdMob : ModuleRules
         {
             //PrivateIncludePaths.Add("Private/IOS");
 
-            // admob
             PublicAdditionalFrameworks.Add(
-            new Framework(
+            new UEBuildFramework(
             "GoogleMobileAds",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/GoogleMobileAds.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new Framework(
-            "GoogleAppMeasurement",														// Framework name
-            "../ThirdParty/ThirdPartyFrameworks/GoogleAppMeasurement.embeddedframework.zip")
-            );
-
-            PublicAdditionalFrameworks.Add(
-            new Framework(
-            "GoogleUtilities",														// Framework name
-            "../ThirdParty/ThirdPartyFrameworks/GoogleUtilities.embeddedframework.zip")
-            );
-
-            PublicAdditionalFrameworks.Add(
-            new Framework(
-            "nanopb",														// Framework name
-            "../ThirdParty/ThirdPartyFrameworks/nanopb.embeddedframework.zip")
-            );
-
-            PublicAdditionalFrameworks.Add(
-            new Framework(
+            new UEBuildFramework(
             "AdsUtil",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/AdsUtil.embeddedframework.zip")
             );
@@ -131,8 +112,7 @@ public class AdMob : ModuleRules
             }
             );
 
-            string PluginPath = Utils.MakePathRelativeTo(ModuleDirectory, Target.RelativeEnginePath);
-            AdditionalPropertiesForReceipt.Add("IOSPlugin", Path.Combine(PluginPath, "AdMob_IOS_UPL.xml"));
+
 
         }
         else if (Target.Platform == UnrealTargetPlatform.Android)
@@ -145,7 +125,15 @@ public class AdMob : ModuleRules
                 );
 
             string PluginPath = Utils.MakePathRelativeTo(ModuleDirectory, Target.RelativeEnginePath);
-            AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(PluginPath, "AdMob_UPL.xml"));  
+
+            if(EngineMinorVersion == "20")
+            {
+                AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(PluginPath, "AdMob420_UPL.xml"));
+            }
+            else
+            {
+                AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(PluginPath, "AdMob_UPL.xml"));
+            }  
         }
         else if (Target.Platform == UnrealTargetPlatform.Win32 || Target.Platform == UnrealTargetPlatform.Win64)
         {

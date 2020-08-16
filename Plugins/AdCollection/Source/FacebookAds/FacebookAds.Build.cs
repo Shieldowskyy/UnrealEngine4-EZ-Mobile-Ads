@@ -98,13 +98,13 @@ public class FacebookAds : ModuleRules
         else if (Target.Platform == UnrealTargetPlatform.IOS)
         {
             PublicAdditionalFrameworks.Add(
-            new Framework(
+            new UEBuildFramework(
             "FBAudienceNetwork",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/FBAudienceNetwork.embeddedframework.zip")
             );
 
             PublicAdditionalFrameworks.Add(
-            new Framework(
+            new UEBuildFramework(
             "AdsUtil",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/AdsUtil.embeddedframework.zip")
             );

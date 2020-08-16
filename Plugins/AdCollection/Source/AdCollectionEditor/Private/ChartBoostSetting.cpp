@@ -4,9 +4,8 @@
 * Copyright (C) 2017 feiwu <feixuwu@outlook.com> All Rights Reserved.
 */
 
-#include "ChartBoostSetting.h"
 #include "AdCollectionEditor.h"
-
+#include "ChartBoostSetting.h"
 
 
 

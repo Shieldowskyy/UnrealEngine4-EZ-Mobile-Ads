@@ -57,20 +57,20 @@ public class ChartBoost : ModuleRules
             //PrivateIncludePaths.Add("Private/IOS");
 
             //PrivateIncludePaths.Add("Private/IOS");
-            /*PublicAdditionalFrameworks.Add(
-                new Framework(
+            PublicAdditionalFrameworks.Add(
+                new UEBuildFramework(
                 "CHAMoatMobileAppKit",														// Framework name
                 "../ThirdParty/ThirdPartyFrameworks/CHAMoatMobileAppKit.embeddedframework.zip")
-                );*/
+                );
 
             PublicAdditionalFrameworks.Add(
-                new Framework(
+                new UEBuildFramework(
                 "Chartboost",														// Framework name
                 "../ThirdParty/ThirdPartyFrameworks/Chartboost.embeddedframework.zip")
                 );
 
             PublicAdditionalFrameworks.Add(
-            new Framework(
+            new UEBuildFramework(
             "AdsUtil",														// Framework name
             "../ThirdParty/ThirdPartyFrameworks/AdsUtil.embeddedframework.zip")
             );

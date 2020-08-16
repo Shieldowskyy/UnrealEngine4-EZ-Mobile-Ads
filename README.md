@@ -1,11 +1,18 @@
 # UnrealEngine4-EZ-Mobile-Ads
+
+Since the necessity to update to Unreal Engine 4.25 and keep using this plugin, i finally managed to work around compiling errors and build this plugin on UE 4.25 Successfully
+
+For this fork to successfully build is required to do as follow, otherwise it will not build and will give errors.
+
+Download this file https://mega.nz/file/VzIllabI#5srG2PDVUr9hpGnsHXlkycrnmVh6z8GQ5fLMcfFNPLQ and replace it in your engine folder  
+Path: UE_4.25\Engine\Build\Android\Java\src\com\epicgames\ue4
+
 One line code(or blueprint) Integrates Google AdMod and other ad networks for iOS &amp; Android.
 
 EZ Mobile Ads help you easy integrates multiple ad networks for your game both Android and IOS same code, 
 By use multiple ad networks, it will  help you maximize fill rate and increase monetization.
-All features are available in C++ and Blueprint. this plugin automatic process ads reload and other detail, so
- you can easy use just call when you need.
- 
+All features are available in C++ and Blueprint. this plugin automatic process ads reload and other detail, so 
+you can easy use just call when you need.
 
 # FEATURES: 
 ★ for people only use admob+unity+vungle+chartboost on android and ios, you can use this plugin on market(will more easy to use and package):

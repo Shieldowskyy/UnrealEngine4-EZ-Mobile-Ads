@@ -10,7 +10,7 @@
 #include "Android/AndroidApplication.h"
 #include "Misc/ConfigCacheIni.h"
 #include "Async/TaskGraphInterfaces.h"
-#include "Containers/StringConv.h"
+#include "StringConv.h"
 
 DEFINE_LOG_CATEGORY_STATIC(AdCollection, Log, All);
 
@@ -98,31 +98,6 @@ __attribute__((visibility("default"))) extern "C" void Java_com_ads_util_Unity_n
 		nullptr,
 		ENamedThreads::GameThread
 		);
-}
-
-__attribute__((visibility("default"))) extern "C" void Java_com_ads_util_Unity_nativeDebugMessage(JNIEnv* jenv, jobject thiz, jstring debugMessage)
-{
-	const char* pDebugMessage = jenv->GetStringUTFChars(debugMessage, 0);
-	FString strDebugMessage = FString(UTF8_TO_TCHAR(pDebugMessage));
-
-	DECLARE_CYCLE_STAT(TEXT("FSimpleDelegateGraphTask.nativeDebugMessage"), STAT_FSimpleDelegateGraphTask_nativeDebugMessage, STATGROUP_TaskGraphTasks);
-	FSimpleDelegateGraphTask::CreateAndDispatchWhenReady(
-		FSimpleDelegateGraphTask::FDelegate::CreateLambda([=]()
-			{
-				//FModuleManager
-				FUnityModule* pModule = FModuleManager::Get().LoadModulePtr<FUnityModule>(TEXT("Unity"));
-				if (pModule == nullptr)
-				{
-					return;
-				}
-
-
-				pModule->TriggerDebugMessageDelegates(strDebugMessage);
-			}),
-		GET_STATID(STAT_FSimpleDelegateGraphTask_nativeDebugMessage),
-				nullptr,
-				ENamedThreads::GameThread
-				);
 }
 
 
