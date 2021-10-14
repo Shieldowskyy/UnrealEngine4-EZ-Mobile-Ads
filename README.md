@@ -4,6 +4,8 @@ Since the necessity to update to Unreal Engine 4.25 and keep using this plugin, 
 
 For this fork to successfully build is required to do as follow, otherwise it will not build and will give errors.
 
+
+*Compile Error is now fixed from the plugin, if it's still not working, edit the engine ->
 Download this file https://mega.nz/file/VzIllabI#5srG2PDVUr9hpGnsHXlkycrnmVh6z8GQ5fLMcfFNPLQ and replace it in your engine folder  
 Path: UE_4.25\Engine\Build\Android\Java\src\com\epicgames\ue4
 
