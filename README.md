@@ -1,11 +1,11 @@
 # UnrealEngine4-EZ-Mobile-Ads
 
-Since the necessity to update to Unreal Engine 4.25 and keep using this plugin, i finally managed to work around compiling errors and build this plugin on UE 4.25 Successfully
+Since the necessity to update to Unreal Engine 4.27 and keep using this plugin, i finally managed to work around compiling errors and build this plugin on UE 4.27 Successfully
 
 For this fork to successfully build is required to do as follow, otherwise it will not build and will give errors.
 
 Download this file https://mega.nz/file/VzIllabI#5srG2PDVUr9hpGnsHXlkycrnmVh6z8GQ5fLMcfFNPLQ and replace it in your engine folder  
-Path: UE_4.25\Engine\Build\Android\Java\src\com\epicgames\ue4
+Path: UE_4.27\Engine\Build\Android\Java\src\com\epicgames\ue4
 
 One line code(or blueprint) Integrates Google AdMod and other ad networks for iOS &amp; Android.
 
